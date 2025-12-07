@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamanna Rawat — UI/UX Portfolio</title>
+  <!-- Typography: Bold display for headings, clean sans-serif for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="#hero" class="logo">TR</a>
+      <nav class="site-nav">
+        <a href="#subjects" class="nav-link">Subjects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Intro -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="display">Hi, I'm Tamanna Rawat</h1>
+          <p class="subheading">BDes UI/UX Design Student</p>
+          <p class="one-liner">This site showcases my assignments from seven subjects.</p>
+          <button class="btn primary" data-scroll-to="#subjects">Explore My Subjects</button>
+        </div>
+        <div class="hero-image">
+          <img src="WhatsApp Image 2025-12-05 at 16.02.36_b521586c.png" alt="Tamanna Rawat profile photo" class="profile-img">
+        </div>
+        <div class="hero-blob" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Subjects Grid -->
+    <section id="subjects" class="subjects">
+      <div class="container">
+        <h2 class="section-title">Subjects</h2>
+        <div class="grid" aria-live="polite">
+          <!-- Card 1: Visualisation & Representation -->
+          <article class="card" data-subject="visualisation">
+            <div class="card-emoji" aria-hidden="true">🪙✨</div>
+            <h3 class="card-title">Visualisation &amp; Representation</h3>
+            <p class="card-summary">Exploring visual storytelling and redesigning artifacts.</p>
+            <button class="btn ghost" data-open-modal>View Assignments</button>
+          </article>
+
+          <!-- Card 2: Elements & Principles of Design -->
+          <article class="card" data-subject="elements">
+            <div class="card-emoji" aria-hidden="true">🎨🧩</div>
+            <h3 class="card-title">Elements &amp; Principles of Design</h3>
+            <p class="card-summary">Composition, contrast, balance, and redesign projects.</p>
+            <button class="btn ghost" data-open-modal>View Assignments</button>
+          </article>
+
+          <!-- Card 3: Materials & Processes (T) -->
+          <article class="card" data-subject="materials">
+            <div class="card-emoji" aria-hidden="true">🛠️🔩</div>
+            <h3 class="card-title">Materials &amp; Processes (T)</h3>
+            <p class="card-summary">Hands-on exploration of materials and making.</p>
+            <button class="btn ghost" data-open-modal>View Assignments</button>
+          </article>
+
+          <!-- Card 4: Programming 1 -->
+          <article class="card" data-subject="programming">
+            <div class="card-emoji" aria-hidden="true">💻🌀</div>
+            <h3 class="card-title">Programming 1</h3>
+            <p class="card-summary">Creative coding and interactive sketches.</p>
+            <button class="btn ghost" data-open-modal>View Assignments</button>
+          </article>
+
+          <!-- Card 5: Interaction Fundamentals -->
+          <article class="card" data-subject="interaction">
+            <div class="card-emoji" aria-hidden="true">🤝♟️</div>
+            <h3 class="card-title">Interaction Fundamentals</h3>
+            <p class="card-summary">Observing, auditing, and designing interactions.</p>
+            <button class="btn ghost" data-open-modal>View Assignments</button>
+          </article>
+
+          <!-- Card 6: Digital Interface & Visualisation 1 -->
+          <article class="card" data-subject="div1">
+            <div class="card-emoji" aria-hidden="true">📱🗂️</div>
+            <h3 class="card-title">Digital Interface &amp; Visualisation 1</h3>
+            <p class="card-summary">Wireframing and interface structures.</p>
+            <button class="btn ghost" data-open-modal>View Assignments</button>
+          </article>
+
+          <!-- Card 7: Design Thinking Methods (T) -->
+          <article class="card" data-subject="dtm">
+            <div class="card-emoji" aria-hidden="true">🧠👛</div>
+            <h3 class="card-title">Design Thinking Methods (T)</h3>
+            <p class="card-summary">Human-centered redesigns and prototyping.</p>
+            <button class="btn ghost" data-open-modal>View Assignments</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Contact -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Tamanna</h2>
+        <p class="about-text">
+          BDes UI/UX student interested in interaction design, interfaces, and problem solving through design.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-text">Email: <a href="mailto:tamannarawat@gmail.com">princirawat722@gmail.com</a></p>
+      </div>
+    </section>
+
+    <!-- Assignment Detail View (Modal) -->
+    <section class="modal" id="assignmentModal" aria-hidden="true" aria-labelledby="modalTitle" role="dialog">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel" role="document">
+        <button class="modal-close" aria-label="Close" title="Close" data-close-modal>&times;</button>
+        <h3 id="modalTitle" class="modal-title">Subject Name</h3>
+        <!-- EDIT: Subject description placeholder text is in script.js data -->
+        <p class="modal-desc" id="modalDesc">Description placeholder. Edit in script.js.</p>
+        <ul class="modal-list" id="modalList" aria-label="Assignments"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Designed and coded by Tamanna Rawat</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
